@@ -1,0 +1,41 @@
+#!/usr/bin/zsh
+
+NAME=$1 # this line is not a must but it's better for understanding
+if [ "$NAME" = "John" ]; then
+    echo "True - my name is indeed John"
+elif [ "$NAME" = "George" ]; then
+    echo "George Harrison"
+else
+    echo "False"
+    echo "You must mistaken me for $NAME"
+fi
+
+mycase=1
+case $mycase in
+    1) echo "You selected bash";;
+    2) echo "You selected perl";;
+    3) echo "You selected python";;
+    4) echo "You selected c++";;
+    5) exit
+esac
+
+# Exercise
+
+# change these variables
+NUMBER=10
+APPLES=12
+KING=GEORGE
+# modify above variables
+# to make all decisions below TRUE
+if [ $NUMBER -lt 15 ] ; then
+  echo 1
+fi
+if [ $NUMBER -ne $APPLES ] ; then
+  echo 2
+fi
+if [[ ($APPLES -eq 12) || ("$KING" = "LUIS") ]] ; then
+  echo 3
+fi
+if [[ $(($NUMBER + $APPLES)) -le 32 ]] ; then
+  echo 4
+fi
